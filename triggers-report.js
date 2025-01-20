@@ -110,8 +110,6 @@ class Triggers {
 
 
 function reportTriggers() {
-    const id = ScriptApp.getScriptId();
-    const fileName = DriveApp.getFileById(id);
     const ss = SpreadsheetApp.getActive();
     const form = FormApp.getActiveForm();
     let name;
@@ -121,6 +119,8 @@ function reportTriggers() {
     } else if (ss) {
         name = ss.getName();
     } else {
+        const id = ScriptApp.getScriptId();
+        const fileName = DriveApp.getFileById(id);
         name = fileName.getName();
     }
     const trigger = new Triggers(name);
