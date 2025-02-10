@@ -53,7 +53,10 @@ PropertiesService.getScriptProperties().setProperty("function_name", new Trigger
   PropertiesService.getScriptProperties().setProperty("onEdit", new Triggers().formattedTime);
   ```
 
-### 4. Create a Time-Based Trigger
+### 4. Run reportTriggers() manually first
+need to be authenticated first, before we set auto trigger.
+
+### 5. Create a Time-Based Trigger
 1. Open the **Triggers** menu in the Apps Script editor.
 2. Add a new trigger for the `reportTriggers()` function:
    - **Function to run**: `reportTriggers`
